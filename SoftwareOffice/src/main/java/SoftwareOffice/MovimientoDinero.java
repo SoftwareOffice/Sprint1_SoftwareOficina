@@ -2,12 +2,12 @@ package SoftwareOffice;
 
 public class MovimientoDinero {
 
-    private double montoMovimiento;
+    private float montoMovimiento;
     private String conceptoMovimiento;
     private String usuarioRegistraMovimiento;
 
     //metodo para montos negativos y positivos
-    public double montoPositivoNegativo(double montoMovimiento){
+    public float montoPositivoNegativo(float montoMovimiento){
         return montoMovimiento;
     }
 
@@ -15,11 +15,11 @@ public class MovimientoDinero {
     public String nombreUsuario(String usuarioRegistraMovimiento) {
         return usuarioRegistraMovimiento;
     }
-    public double getMontoMovimiento() {
+    public float getMontoMovimiento() {
         return montoMovimiento;
     }
 
-    public void setMontoMovimiento(double montoMovimiento) {
+    public void setMontoMovimiento(float montoMovimiento) {
         this.montoMovimiento = montoMovimiento;
     }
 

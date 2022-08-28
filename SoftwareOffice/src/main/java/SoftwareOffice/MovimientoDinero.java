@@ -7,12 +7,14 @@ public class MovimientoDinero {
     private String usuarioRegistraMovimiento;
 
     //metodo para montos negativos y positivos
-    public void montosPosNeg(){
-
+    public double montoPositivoNegativo(double montoMovimiento){
+        return montoMovimiento;
     }
-    //metodo para usuario encargado de registrar movimiento
 
-
+    //metodo definir qué usuario fue encargado de registrar el movimiento.
+    public String nombreUsuario(String usuarioRegistraMovimiento) {
+        return usuarioRegistraMovimiento;
+    }
     public double getMontoMovimiento() {
         return montoMovimiento;
     }

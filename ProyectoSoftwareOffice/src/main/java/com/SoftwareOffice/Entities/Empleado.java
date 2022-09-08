@@ -1,21 +1,18 @@
 package com.SoftwareOffice.Entities;
-
-import javax.persistence.*;
-
 @Table(name="empleado")
 public class Empleado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idEmpleado;
+    private  Integer idEmpleado;
 
-    @Column(name = "nombresEmpleado", length = 100, nullable = false)
+    @Column(name="nombresEmpleado", length = 100, nullable = false)
     protected String nombreEmpleado;
-    @Column(name = "Email", length = 100, nullable = false)
+    @Column(name="Email", length = 100, nullable = false)
     protected String correoElectronico;
-    @Column(name = " NombreEmpresa", length = 100, nullable = false)
+    @Column(name=" NombreEmpresa", length = 100, nullable = false)
     protected String empresaEmpleado;
-    @Column(name = "rol", length = 100, nullable = false)
+    @Column(name="rol", length = 100, nullable = false)
     private String rol;
 
     public String getRol() {
@@ -50,5 +47,3 @@ public class Empleado {
     public void setEmpresaEmpleado(String empresaEmpleado) {
         this.empresaEmpleado = empresaEmpleado;
     }
-
-}

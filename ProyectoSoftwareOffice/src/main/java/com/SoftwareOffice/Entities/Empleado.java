@@ -1,8 +1,7 @@
 package com.SoftwareOffice.Entities;
 
 import javax.persistence.*;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
 
 @Table(name="empleado")
 public class Empleado {

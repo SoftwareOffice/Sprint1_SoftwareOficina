@@ -1,5 +1,7 @@
 package SoftwareOffice;
 
+import java.util.Objects;
+
 public class Empleado {
 
     private String nombreEmpleado;

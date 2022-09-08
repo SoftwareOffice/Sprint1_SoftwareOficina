@@ -1,16 +1,38 @@
 package SoftwareOffice;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 
+import javax.persistence.Table;
+
+@Entity
+@Table(name="empleado")
 public class Empleado {
-    protected String nombreEmpleado;
-    protected String correoElectronico;
-    protected String empresaEmpleado;
 
-    
-    public Empleado(String nombreEmpleado, String correoElectronico, String empresaEmpleado) {
-        this.nombreEmpleado = nombreEmpleado;
-        this.correoElectronico = correoElectronico;
-        this.empresaEmpleado = empresaEmpleado;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  Integer idEmpleado;
+
+    @Column(name="nombresEmpleado", length = 100, nullable = false)
+    protected String nombreEmpleado;
+    @Column(name="Email", length = 100, nullable = false)
+    protected String correoElectronico;
+    @Column(name=" NombreEmpresa", length = 100, nullable = false)
+    protected String empresaEmpleado;
+    @Column(name="rol", length = 100, nullable = false)
+    private String rol;
+
+    public String getRol() {
+        return rol;
     }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
 
     public String getNombreEmpleado() {
         return nombreEmpleado;
@@ -36,10 +58,7 @@ public class Empleado {
         this.empresaEmpleado = empresaEmpleado;
     }
 
-    @Override
-    public String toString() {
-        return "Empleado{" + "nombreEmpleado=" + nombreEmpleado + ", correoElectronico=" + correoElectronico + ", empresaEmpleado=" + empresaEmpleado + '}';
-    }
+
 
 
 }

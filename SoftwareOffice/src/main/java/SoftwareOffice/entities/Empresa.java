@@ -1,17 +1,27 @@
 package SoftwareOffice;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 
+import javax.persistence.Table;
+
+@Entity
+@Table(name="empresa")
 public class Empresa {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer nit;
+    @Column(name="nombres empresa", length = 100, nullable = false)
     private String nombre;
+    @Column(name="direccion", length = 100, nullable = false)
     private String direccion;
-    private int telefono;
-    private int nit;
+    @Column(name="telefono", length = 100, nullable = false)
+    private String  telefono;
 
-    public Empresa(String nombre, String direccion, int telefono, int nit) {
-        this.nombre = nombre;
-        this.direccion = direccion;
-        this.telefono = telefono;
-        this.nit = nit;
-    }
+
 
     public String getNombre() {
         return nombre;

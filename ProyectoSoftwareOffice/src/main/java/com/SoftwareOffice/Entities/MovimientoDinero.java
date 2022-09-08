@@ -1,5 +1,6 @@
 package com.SoftwareOffice.Entities;
 
+import javax.persistence.*;
 @Entity
 @Table(name="movimientoDinero ")
 public class MovimientoDinero {

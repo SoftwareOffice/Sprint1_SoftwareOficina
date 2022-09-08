@@ -1,6 +1,6 @@
 package com.SoftwareOffice.Entities;
 
-public class Empresa {
+import javax.persistence.*;
 
     @Entity
     @Table(name="empresa")

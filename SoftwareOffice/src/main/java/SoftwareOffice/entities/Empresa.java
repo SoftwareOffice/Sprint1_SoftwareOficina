@@ -1,6 +1,4 @@
-package SoftwareOffice.entities;
-
-
+package SoftwareOffice;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -41,7 +39,13 @@ public class Empresa {
         this.direccion = direccion;
     }
 
+    public int getTelefono() {
+        return telefono;
+    }
 
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
 
     public int getNit() {
         return nit;
